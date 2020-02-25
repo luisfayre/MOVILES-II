@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='EVAL1_4_FRAG-DIN-ORIENTA'
