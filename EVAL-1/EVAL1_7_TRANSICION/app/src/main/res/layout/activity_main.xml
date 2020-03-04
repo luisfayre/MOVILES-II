@@ -3,28 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="171dp"
         android:transitionName="mi_transicion"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        app:srcCompat="@drawable/img" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Mas"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
-        android:gravity="center_horizontal"
-        android:text="Button" />
+        android:onClick="onClick"/>
 </RelativeLayout>
