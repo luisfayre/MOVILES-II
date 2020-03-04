@@ -18,19 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ViewGroup remp = findViewById(R.id.linearLayout); //Contenedor que contendra todos
-        sceneA = Scene.getSceneForLayout(remp,R.id.sceneA,this);
-        sceneB = Scene.getSceneForLayout(remp,R.id.sceneB,this);
 
+        sceneA = Scene.getSceneForLayout(remp, R.layout.esena_a, this);
+        sceneB = Scene.getSceneForLayout(remp, R.layout.esena_b, this);
         Transition fade = new Fade();
-        TransitionManager.go(sceneA, fade);
-
+        TransitionManager.go(sceneB, fade);
     }
 
-    public void miboton (View v){
+    public void miboton(View v) {
         Transition sl = new Slide();
-        TransitionManager.go(sceneB, sl);
+        TransitionManager.go(sceneA, sl);
     }
 
 }
