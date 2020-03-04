@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-        getWindow().setEnterTransition(new Slide().setDuration(5000));
+        getWindow().setEnterTransition(new Slide().setDuration(500));
         setContentView(R.layout.activity_main);
         inLlamar = new Intent(this,Main2Activity.class);
     }

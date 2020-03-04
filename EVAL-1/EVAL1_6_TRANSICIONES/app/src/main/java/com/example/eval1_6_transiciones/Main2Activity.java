@@ -15,7 +15,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-        getWindow().setEnterTransition(new ChangeScroll().setDuration(5000));
+        getWindow().setEnterTransition(new Explode().setDuration(500));
         setContentView(R.layout.activity_main2);
     }
 }
