@@ -31,7 +31,7 @@ public class ButtonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        LinearLayout ll =(LinearLayout) inflater.inflate(R.id.fragment, container,false);
+        LinearLayout ll = (LinearLayout) inflater.inflate(R.layout.button_fragement, container, false);
         Button btn = ll.findViewById(R.id.btn_frag);
         btn.setOnClickListener(miClick);
 

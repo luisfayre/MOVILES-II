@@ -15,16 +15,20 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ButtonFragment buttonFragement = new ButtonFragment();
+        ft.setCustomAnimations(R.anim.anim, R.anim.anim_exit, R.anim.anim, R.anim.anim_exit);
         buttonFragement.setMiClick(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
-                FragmentTwo blackFragment = new FragmentTwo();
-                ft2.replace(R.id.fragment, blackFragment);
+                ft2.setCustomAnimations(R.anim.anim, R.anim.anim_exit, R.anim.anim, R.anim.anim_exit);
+                FragmentTwo blankFragment = new FragmentTwo();
+                ft2.replace(R.id.fragment, blankFragment);
+                ft2.addToBackStack("Hello, World");
                 ft2.commit();
             }
         });
-        ft.replace(R.id.fra,buttonFragement);
+        ft.replace(R.id.fragment,buttonFragement);
+        ft.addToBackStack("Hola2");
         ft.commit();
 
     }
